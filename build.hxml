@@ -7,4 +7,5 @@
 -js build/index.js
 
 -cmd cp -r img/ build/
--cmd cp index.html build/index.html
+-cmd cp index.html build/
+-cmd cp index.css build/

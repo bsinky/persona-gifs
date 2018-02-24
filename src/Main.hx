@@ -2,7 +2,7 @@ package;
 
 #if js
 import js.Browser;
-import js.html.ImageElement;
+import js.html.Element;
 #end
 
 import Random;
@@ -12,17 +12,16 @@ class Main {
 
     public static var images:Array<String> = Macros.getImages();
     public static function main():Void {
-        var containerElement = cast Browser.document.querySelector('.container');
-        var gifElement = cast containerElement.querySelector('.personagif');
+        var containerElement:Element = cast Browser.document.querySelector(".personagif");
 
         containerElement.addEventListener("click", function () {
-            randomizeImage(gifElement);
+            randomizeImage(containerElement);
         });
 
-        randomizeImage(gifElement);
+        randomizeImage(containerElement);
     }
 
-    private static function randomizeImage(gifcontainer:ImageElement) {
-        gifcontainer.src = "img/" + Random.fromArray(images);
+    private static function randomizeImage(gifcontainer:Element) {
+        gifcontainer.style.backgroundImage = "url(\"img/" + Random.fromArray(images) + "\")";
     }
 }
