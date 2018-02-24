@@ -14,9 +14,7 @@ class Main {
     public static function main():Void {
         var containerElement:Element = cast Browser.document.querySelector(".personagif");
 
-        containerElement.addEventListener("click", function () {
-            randomizeImage(containerElement);
-        });
+        containerElement.addEventListener("click", randomizeImage.bind(containerElement));
 
         randomizeImage(containerElement);
     }

@@ -9,7 +9,8 @@
     margin: auto;
     overflow: auto;
 
+    height: 100%;
+
     background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: cover;
+    background-position: center;
 }
