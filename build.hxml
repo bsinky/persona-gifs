@@ -1,11 +1,12 @@
 -cp src
 
-
 -main Main
 -lib random
 
 -js build/index.js
 
+# copy static files to build directory
 -cmd cp -r img/ build/
 -cmd cp index.html build/
 -cmd cp index.css build/
+-cmd cp favicon.ico build/
