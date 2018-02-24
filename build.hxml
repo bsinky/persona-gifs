@@ -1,0 +1,5 @@
+-main Main
+-js build/index.js
+
+-cmd cp -r img/ build/
+-cmd cp index.html build/index.html
