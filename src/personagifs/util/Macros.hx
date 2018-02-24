@@ -3,8 +3,6 @@ package personagifs.util;
 #if macro
 import haxe.macro.Context;
 import haxe.macro.Expr;
-import haxe.macro.Type;
-import haxe.io.Path;
 import sys.FileSystem;
 #end
 
