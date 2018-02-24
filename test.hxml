@@ -1,0 +1,6 @@
+-cp tests
+-cp src
+
+-lib buddy
+
+-x tests.TestMain

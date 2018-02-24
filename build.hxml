@@ -1,4 +1,9 @@
+-cp src
+
+
 -main Main
+-lib random
+
 -js build/index.js
 
 -cmd cp -r img/ build/

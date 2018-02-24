@@ -1,1 +1,4 @@
 build/
+
+# ignore artifacts from running tests
+tests.TestMain.n
