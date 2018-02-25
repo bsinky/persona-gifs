@@ -1,11 +1,9 @@
 language: haxe
 haxe:
-  - 3.4.2
   - stable
-  - development
 
 hxml:
-  - build.hxml
+  - build-prod.hxml
   - test.hxml
 
 deploy:
