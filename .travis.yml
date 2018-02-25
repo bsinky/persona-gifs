@@ -7,3 +7,12 @@ haxe:
 hxml:
   - build.hxml
   - test.hxml
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  local-dir: build
+  on:
+    branch: master
