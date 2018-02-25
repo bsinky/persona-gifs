@@ -28,7 +28,7 @@ haxe test.hxml
 
 ### Just want to add a new GIF?
 
-Add your image to the `img` folder and give it a relatively human-readable name.  That's it! Make a Pull Request.
+Add your image to the `public/img` folder and give it a relatively human-readable name.  That's it! Make a Pull Request.
 
 ### Want to improve the code?
 
@@ -38,4 +38,4 @@ Fork the repo, branch, and make your changes.  Then submit a Pull Request so we 
 
 Code is licensed under the MIT license.  See the LICENSE file for details.
 
-`img` folder contents are largely sourced from Google Images.
+`public/img` folder contents are largely sourced from Google Images.
