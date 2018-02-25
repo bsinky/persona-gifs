@@ -9,7 +9,7 @@ import sys.FileSystem;
 
 class Macros {
     public static macro function getImages() {
-        var imageDirectory = "img";
+        var imageDirectory = Path.join(["public", "img"]);
         var absImageDir = Path.join([FileSystem.absolutePath("."), imageDirectory]);
 
         if (!FileSystem.exists(absImageDir) || !FileSystem.isDirectory(absImageDir))

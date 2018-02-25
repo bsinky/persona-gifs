@@ -1,4 +1,5 @@
-build/
+# ignore Haxe compiled files
+public/index.js
 
 # ignore artifacts from running tests
 tests.TestMain.n
