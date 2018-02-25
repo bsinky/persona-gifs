@@ -4,7 +4,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-A site for random Persona GIFs from the Shin Megami Tensei video game series.
+A site for random Persona GIFs from the Shin Megami Tensei: Persona video game series.
 
 ## Building
 
