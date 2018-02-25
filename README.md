@@ -8,7 +8,7 @@ A site for random Persona GIFs from the Shin Megami Tensei video game series.
 
 ## Building
 
-The Haxe compiler (tested on 3.4.4) is required, grab it from the [official site](https://haxe.org/download/).
+Haxe (tested on 3.4.4) is required, grab it from the [official site](https://haxe.org/download/).
 
 Then run the following from the root of the repo directory:
 
@@ -32,7 +32,7 @@ Add your image to the `img` folder and give it a relatively human-readable name.
 
 ### Want to improve the code?
 
-Fork the repo, branch, and make your changes.
+Fork the repo, branch, and make your changes.  Then submit a Pull Request so we can get your changes merged!
 
 ## License
 
