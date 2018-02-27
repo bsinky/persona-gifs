@@ -18,7 +18,10 @@ class Macros {
         }
 
         // make array of image names and convert to expressions
-        var exprs = [for(value in FileSystem.readDirectory(absImageDir)) macro $v{value}];
+        var exprs = [
+            for(value in FileSystem.readDirectory(absImageDir))
+                macro $v{Path.withoutExtension(value)}
+            ];
 
         return macro $a{exprs};
   }

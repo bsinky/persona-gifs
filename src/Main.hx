@@ -14,16 +14,45 @@ class Main {
         var containerElement:Element = cast Browser.document.querySelector(".personagif");
         var imageElement:ImageElement = cast containerElement.querySelector("img");
 
-        containerElement.addEventListener("click", randomizeImage.bind(imageElement));
-
-        randomizeImage(imageElement);
-        resizeImage(imageElement);
+        containerElement.addEventListener("click", randomizeImage);
 
         Browser.window.addEventListener("resize", resizeImage.bind(imageElement));
+
+        var processRequestedImage = function() {
+            var requestedImage = getImageFromHash();
+
+            if (requestedImage != null) {
+                setImage(imageElement, requestedImage);
+                resizeImage(imageElement);
+            }
+        };
+
+        Browser.window.addEventListener("hashchange", processRequestedImage);
+
+        if (getImageFromHash() == null) {
+            randomizeImage();
+        }
+        else {
+            processRequestedImage();
+        }
     }
 
-    private static function randomizeImage(imageElement:ImageElement) {
-        imageElement.src = "img/" + Random.fromArray(images);
+    private static function getImageFromHash() {
+        var requestedImage = Browser.location.hash;
+
+        return
+            if (requestedImage != null && requestedImage.length > 0)
+                requestedImage.substr(1)
+            else
+                null;
+    }
+
+    private static function randomizeImage() {
+        Browser.location.hash = Random.fromArray(images);
+    }
+
+    private static function setImage(imageElement:ImageElement, image:String) {
+        imageElement.src = "img/" + image + ".gif";
     }
 
     private static function resizeImage(imageElement:ImageElement) {
