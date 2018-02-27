@@ -1,10 +1,8 @@
 package;
 
-#if js
 import js.Browser;
 import js.html.Element;
 import js.html.ImageElement;
-#end
 
 import Random;
 import personagifs.util.Macros;
