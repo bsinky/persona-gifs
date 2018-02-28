@@ -29,6 +29,14 @@ class TestMain extends buddy.SingleSuite {
                     Path.extension(image).should.be("gif");
                 }
             });
+
+            it("should only contain GIFs that are under 1 megabyte", {
+                for (image in filesystemImages) {
+                    var relativeImagePath = Path.join([TestHelper.getImageDirectory(), image]);
+                    var fileStat = FileSystem.stat(relativeImagePath);
+                    fileStat.size.should.beLessThan(1000000);
+                }
+            });
         });
     }
 }
