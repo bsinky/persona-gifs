@@ -8,6 +8,9 @@ hxml:
 
 deploy:
   provider: pages
+  # Temporary fix for broken Travis deploy, https://github.com/travis-ci/travis-ci/issues/9312
+  edge:
+    branch: pages-ivar-set
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
