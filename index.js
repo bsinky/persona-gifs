@@ -157,6 +157,6 @@ js_Boot.__string_rec = function(o,s) {
 };
 String.__name__ = true;
 Array.__name__ = true;
-Main.images = ["TakeYourTime","chalkthrow","chidorilaugh","chie","dealwithit","futabakeyboard","fuukabooks","jackfrost","kimonos","morganabathe","p3dancingfuukaken","p3protagevoker","p3thanatos","p3trippy","p4teddie","p5jailzoom","p5kamoshidadestroys","p5logo","p5morganathrow","p5protagcoffee","p5protaggrin","p5ryujibeach","pqdrink","tatsuyafighterjet","yusukeflourish"];
+Main.images = ["TakeYourTime","chalkthrow","chidorilaugh","chie","dealwithit","futabakeyboard","fuukabooks","jackfrost","kimonos","morganabathe","p3dancingfuukaken","p3protagevoker","p3thanatos","p3trippy","p4teddie","p5dfistbumping","p5jailzoom","p5kamoshidadestroys","p5logo","p5morganathrow","p5protagcoffee","p5protaggrin","p5ryujibeach","p5timetobuttonmash","pqdrink","tatsuyafighterjet","yusukeflourish"];
 Main.main();
 })();
