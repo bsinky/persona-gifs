@@ -31,10 +31,18 @@ class TestMain extends buddy.SingleSuite {
             });
 
             it("should only contain GIFs that are under 1 megabyte", {
+                var tooLargeImages = "";
                 for (image in filesystemImages) {
                     var relativeImagePath = Path.join([TestHelper.getImageDirectory(), image]);
                     var fileStat = FileSystem.stat(relativeImagePath);
-                    fileStat.size.should.beLessThan(1000000);
+                    if (fileStat.size > 1000000) {
+                        tooLargeImages += '    - ${image} (${fileStat.size / 1000000} MB)\n';
+                    }
+                }
+
+                if (tooLargeImages.length > 0) {
+                    tooLargeImages = "The following images are too large (should be 1MB or less):\n" + tooLargeImages;
+                    fail(tooLargeImages);
                 }
             });
         });
